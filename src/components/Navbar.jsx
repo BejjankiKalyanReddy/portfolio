@@ -34,9 +34,9 @@ const Navbar = () => {
               <span className="nav-number">0{index + 1}.</span> {link.name}
             </a>
           ))}
-          <a href="/resume.pdf" target="_blank" className="resume-btn">
+          {/* <a href="/resume.pdf" target="_blank" className="resume-btn">
             Resume
-          </a>
+          </a> */}
         </div>
 
         <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -59,9 +59,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="/resume.pdf" target="_blank" className="resume-btn-mobile">
+            {/* <a href="/resume.pdf" target="_blank" className="resume-btn-mobile">
               Resume
-            </a>
+            </a> */}
           </motion.div>
         )}
       </div>
