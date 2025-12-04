@@ -8,7 +8,7 @@ export const portfolioData = {
     linkedin: "https://linkedin.com/in/kalyanbejjanki",
     github: "https://github.com/Kalynreddykiller18",
   },
-  about: "Hello! I'm Bejjanki Kalyan Reddy, worked as Full-stack developer in Wipro for 2 years 8 months. Currently looking for opportunities as Full-stack Developer and Improving as Developer with DSA in JAVA",
+  about: "worked as Full-stack developer in Wipro for 2 years 8 months. Currently looking for opportunities as Full-stack Developer and Improving as Developer with DSA in JAVA",
   skills: [
     { category: "Programming Languages", items: [
       { name: "Java", level: 90 },
@@ -61,22 +61,22 @@ export const portfolioData = {
       title: "OIAES Systems",
       category: "Freelance",
       tech: "React, Next, Tailwind",
-      image: "OIAES.png", // Placeholder, will need to handle images
+      image: "/assets/images/OIAES.png", // Placeholder, will need to handle images
       link: "https://oiaes.com"
     },
     {
       title: "Agritech",
       category: "Personal",
       tech: "React, Bootstrap, Commerce.js",
-      image: "agritech.png",
-      link: "https://agritech123.netlify.app/login"
+      image: "/assets/images/agritech.jpeg",
+      link: "https://agritechnew.netlify.app/"
     },
     {
-      title: "Authentication Demo",
-      category: "Personal",
+      title: "HealthCall",
+      category: "Freelance",
       tech: "React, Express, MongoDB",
-      image: "authdemo.png",
-      link: "https://authedemobykalyan.netlify.app/"
+      image: "/assets/images/healthcall.jpeg",
+      link: "https://healthcall.co.in/"
     }
   ]
 };

@@ -27,9 +27,77 @@ const About = () => {
           </div>
 
           <div className="about-img">
-            <div className="img-wrapper">
-              <img src="/assets/images/profile-avatar.png" alt="Profile" />
-            </div>
+            <motion.div 
+              className="code-card"
+              whileHover={{ scale: 1.02, rotate: 1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="code-header">
+                <div className="window-controls">
+                  <span className="control close"></span>
+                  <span className="control minimize"></span>
+                  <span className="control maximize"></span>
+                </div>
+              </div>
+              <div className="code-content">
+                <span className="code-line">
+                  <span className="keyword">const</span> <span className="property">developer</span> <span className="punctuation">=</span> <span className="punctuation">{`{`}</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">name</span><span className="punctuation">:</span> <span className="string">"{portfolioData.name}"</span><span className="punctuation">,</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">role</span><span className="punctuation">:</span> <span className="string">"{portfolioData.title}"</span><span className="punctuation">,</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">skills</span><span className="punctuation">:</span> <span className="punctuation">[</span>
+                </span>
+                {portfolioData.skills[0].items.slice(0, 3).map((skill, index) => (
+                  <span className="code-line" key={index}>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span className="string">"{skill.name}"</span><span className="punctuation">,</span>
+                  </span>
+                ))}
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="string">"..."</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="punctuation">]</span><span className="punctuation">,</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">hardWorker</span><span className="punctuation">:</span> <span className="keyword">true</span><span className="punctuation">,</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">quickLearner</span><span className="punctuation">:</span> <span className="keyword">true</span><span className="punctuation">,</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">problemSolver</span><span className="punctuation">:</span> <span className="keyword">true</span><span className="punctuation">,</span>
+                </span>
+                 <span className="code-line">
+                  &nbsp;&nbsp;<span className="property">hireable</span><span className="punctuation">:</span> <span className="keyword">function</span><span className="punctuation">()</span> <span className="punctuation">{`{`}</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="keyword">return</span> <span className="punctuation">(</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="keyword">this</span><span className="punctuation">.</span><span className="property">hardWorker</span> <span className="punctuation">&&</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="keyword">this</span><span className="punctuation">.</span><span className="property">problemSolver</span> <span className="punctuation">&&</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="keyword">this</span><span className="punctuation">.</span><span className="property">skills</span><span className="punctuation">.</span><span className="property">length</span> <span className="punctuation"> &gt;= </span> <span className="number">5</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="punctuation">)</span><span className="punctuation">;</span>
+                </span>
+                <span className="code-line">
+                  &nbsp;&nbsp;<span className="punctuation">{`}`}</span>
+                </span>
+                <span className="code-line">
+                  <span className="punctuation">{`}`}</span><span className="punctuation">;</span>
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -48,40 +116,61 @@ const About = () => {
         }
         .about-img {
           position: relative;
-          max-width: 300px;
+          max-width: 400px;
           margin: 0 auto;
         }
-        .img-wrapper {
-          position: relative;
-          border-radius: 4px;
+        
+        /* Code Card Styles */
+        .code-card {
+          background: rgba(2, 12, 27, 0.8);
+          border-radius: 8px;
+          border: 1px solid #233554;
+          box-shadow: 0 20px 50px -15px rgba(2, 12, 27, 0.7);
           overflow: hidden;
-          box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+          font-family: 'Fira Code', monospace;
+          font-size: 14px;
+          line-height: 1.5;
+          transition: transform 0.2s ease;
         }
-        .img-wrapper::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: var(--accent-color);
-          opacity: 0.3;
-          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        
+        .code-header {
+          background: #0a192f;
+          padding: 10px 15px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #233554;
         }
-        .img-wrapper:hover::after {
-          opacity: 0;
+        
+        .window-controls {
+          display: flex;
+          gap: 8px;
         }
-        .img-wrapper img {
-          width: 100%;
-          height: auto;
+        
+        .control {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+        
+        .close { background-color: #ff5f56; }
+        .minimize { background-color: #ffbd2e; }
+        .maximize { background-color: #27c93f; }
+        
+        .code-content {
+          padding: 20px;
+          color: #a8b2d1;
+        }
+        
+        .code-line {
           display: block;
-          filter: grayscale(100%) contrast(1);
-          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+          margin-bottom: 4px;
         }
-        .img-wrapper:hover img {
-          filter: none;
-        }
+        
+        .keyword { color: #c678dd; } /* purple */
+        .property { color: #e06c75; } /* red */
+        .string { color: #98c379; } /* green */
+        .number { color: #d19a66; } /* orange */
+        .punctuation { color: #a8b2d1; } /* white-ish */
         
         @media (max-width: 768px) {
           .about-content {
@@ -89,6 +178,7 @@ const About = () => {
           }
           .about-img {
             margin-top: 50px;
+            width: 100%;
           }
         }
       `}</style>

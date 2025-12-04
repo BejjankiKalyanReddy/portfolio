@@ -54,7 +54,16 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 25px;
+  }
+  .section {
+    padding: 80px 0;
+  }
 }
 
 .section {
