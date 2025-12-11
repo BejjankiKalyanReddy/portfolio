@@ -58,13 +58,6 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: "OIAES Systems",
-      category: "Freelance",
-      tech: "React, Next, Tailwind",
-      image: "/assets/images/OIAES.png", // Placeholder, will need to handle images
-      link: "https://oiaes.com"
-    },
-    {
       title: "Agritech",
       category: "Personal",
       tech: "React, Bootstrap, Commerce.js",
