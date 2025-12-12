@@ -8,39 +8,58 @@ export const portfolioData = {
     linkedin: "https://linkedin.com/in/kalyanbejjanki",
     github: "https://github.com/Kalynreddykiller18",
   },
-  about: "worked as Full-stack developer in Wipro for 2 years 8 months. Currently looking for opportunities as Full-stack Developer and Improving as Developer with DSA in JAVA",
+  about:
+    "worked as Full-stack developer in OIAE Systmes & Wipro for over 3 years. Currently looking for opportunities as Full-stack Developer and Improving as Developer with DSA in JAVA",
   skills: [
-    { category: "Programming Languages", items: [
-      { name: "Java", level: 90 },
-      { name: "Python", level: 80 },
-      { name: "C++", level: 70 },
-      { name: "C#", level: 90 }
-    ]},
-    { category: "Web Development", items: [
-      { name: "HTML, CSS, JS", level: 95 },
-      { name: "Node.js & Express", level: 90 },
-      { name: "React.js", level: 90 },
-      { name: "Next.js", level: 80 },
-      { name: "Angular", level: 70 }
-    ]},
-    { category: "Database", items: [
-      { name: "SQL", level: 90 },
-      { name: "MongoDB", level: 95 }
-    ]}
+    {
+      category: "Programming Languages",
+      items: [
+        { name: "Java", level: 90 },
+        { name: "Python", level: 80 },
+        { name: "C++", level: 70 },
+        { name: "C#", level: 90 },
+      ],
+    },
+    {
+      category: "Web Development",
+      items: [
+        { name: "HTML, CSS, JS", level: 95 },
+        { name: "Node.js & Express", level: 90 },
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 80 },
+        { name: "Angular", level: 70 },
+      ],
+    },
+    {
+      category: "Database",
+      items: [
+        { name: "SQL", level: 90 },
+        { name: "MongoDB", level: 95 },
+      ],
+    },
   ],
   experience: [
+    {
+      role: "Software Developer",
+      company: "OIAE Systems",
+      period: "2024 October — 2025 November",
+      description:
+        "The Employee Performance & Task Management System is an enterprise-level web application designed to streamline employee task allocation, progress tracking, and performance evaluation across departments. The platform enables managers to assign tasks, monitor completion status, generate performance metrics, and maintain historical records for audits and periodic reviews. Developed using Java and Spring Boot, the application follows a modular microservice-style architecture, ensuring scalability and ease of maintenance. Hibernate is used as the ORM layer to handle efficient mapping between Java entities and the Oracle SQL database, ensuring smooth CRUD operations and optimized query performance.",
+    },
     {
       role: "Software Engineer",
       company: "Wipro pvt ltd",
       period: "2022 April — 2024 October",
-      description: "Utilized React.js to improve the frontend user interface, resolving UI/UX issues and enhancing user satisfaction across all internal platforms. Implemented new features using JavaScript and React.js, adding dynamic functionality and interactive elements. Collaborated with designers and backend developers to roll out new features. Optimized site performance using JavaScript."
+      description:
+        "Utilized React.js to improve the frontend user interface, resolving UI/UX issues and enhancing user satisfaction across all internal platforms. Implemented new features using JavaScript and React.js, adding dynamic functionality and interactive elements. Collaborated with designers and backend developers to roll out new features. Optimized site performance using JavaScript.",
     },
     {
       role: "Full-stack Developer",
       company: "Digital Bank Loan system - ICICI(client)",
       period: "2022 September — 2024 October",
-      description: "Developed dynamic, responsive web interfaces using Angular. Designed and implemented efficient backend services leveraging Spring MVC. Implemented authorization and authentication mechanisms using JWT. Integrated Angular frontend seamlessly with backend REST APIs. Used Hibernate (JPA) for ORM. Containerized backend microservices using Docker."
-    }
+      description:
+        "Developed dynamic, responsive web interfaces using Angular. Designed and implemented efficient backend services leveraging Spring MVC. Implemented authorization and authentication mechanisms using JWT. Integrated Angular frontend seamlessly with backend REST APIs. Used Hibernate (JPA) for ORM. Containerized backend microservices using Docker.",
+    },
   ],
   education: [
     {
@@ -48,13 +67,13 @@ export const portfolioData = {
       degree: "Bachelor of Technology",
       course: "Information Technology",
       period: "2018 — 2024",
-      gpa: "7.5/10"
+      gpa: "7.5/10",
     },
     {
       institution: "NRI Junior college",
       period: "2016 — 2018",
-      gpa: "9.7/10"
-    }
+      gpa: "9.7/10",
+    },
   ],
   projects: [
     {
@@ -62,14 +81,14 @@ export const portfolioData = {
       category: "Personal",
       tech: "React, Bootstrap, Commerce.js",
       image: "/assets/images/agritech.jpeg",
-      link: "https://agritechnew.netlify.app/"
+      link: "https://agritechnew.netlify.app/",
     },
     {
       title: "HealthCall",
       category: "Freelance",
       tech: "React, Express, MongoDB",
       image: "/assets/images/healthcall.jpeg",
-      link: "https://healthcall.co.in/"
-    }
-  ]
+      link: "https://healthcall.co.in/",
+    },
+  ],
 };
